@@ -1,0 +1,14 @@
+{% if vek >= 18%}
+<p> som starec </p>
+{% else %}
+<p> mam {{ vek }} rokov </p>
+{% endif %}
+
+<h2>oblubene predmety:</h2>
+<ul>
+    {% for p in predmety %}
+    <li>{{p}}</li>
+    {% empty %}
+    <li>ziadne zaluby</li>
+    {% endfor %}
+</ul>
