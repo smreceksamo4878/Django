@@ -1,0 +1,16 @@
+<h1>sucet 2 cisel</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="num1"> <input type="number" name="num1" id="num1" required> </label>
+    <select name="znak" id="" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+    </select>
+    <label for="num2"> <input type="number" name="num2" id="num2" required> </label>
+    <button>spocitaj</button>
+</form>
+
+{% if ans != None %}
+    <p>vysledok: {{ ans }}</p>
+{% endif %}
