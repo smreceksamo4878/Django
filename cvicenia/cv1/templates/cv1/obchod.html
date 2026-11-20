@@ -1,0 +1,22 @@
+<form action="" method="get">
+    <label for="max">max. cena <input name="max" type="text"></label>
+    <button>vyfiltruj</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>produkt</th>
+        <th>cena</th>
+    </tr>
+
+    {% for k in kontext %}
+        <tr>
+            <td>{{ k.nazov }}</td>
+            {% if k.cena < 5 %}
+                <th>{{ k.cena|floatformat:2 }}€</th>  
+            {% else %}
+                <td>{{ k.cena|floatformat:2 }}€</td>  
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,10 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="body"><input type="text" name="body" id="body">body</label><br>
+    <label for="max"><input type="text" name="max" id="max">max</label>
+    <button>spociutaj</button>
+</form>
+
+{% if ans != None %}
+<p>{{ ans }}</p>
+{% endif %}
